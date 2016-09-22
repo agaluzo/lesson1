@@ -1,4 +1,4 @@
-MinFixedMonthlyPayment = 10
+﻿MinFixedMonthlyPayment = 10
 balance = 3926
 annualInterestRate = 0.2
 unpaidBalance = updatedBalance = balance
@@ -16,6 +16,3 @@ while True:
         break
 
 print('Lowest payment: %d' % MinFixedMonthlyPayment)
-
-
-jk
