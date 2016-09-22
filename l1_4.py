@@ -16,3 +16,6 @@ while True:
         break
 
 print('Lowest payment: %d' % MinFixedMonthlyPayment)
+
+
+jk
