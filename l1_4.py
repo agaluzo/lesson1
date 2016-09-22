@@ -1,18 +1,22 @@
-﻿MinFixedMonthlyPayment = 10
-balance = 3926
+﻿balance = 320000
 annualInterestRate = 0.2
-unpaidBalance = updatedBalance = balance
-totalPaid = 0
+lowerBound = balance/12
+upperBound = (balance * (1 + (annualInterestRate/12.0))**12) / 12
 
-while True:
-    for i in range (1, 13):
-        unpaidBalance = updatedBalance - MinFixedMonthlyPayment
-        interest = annualInterestRate/12 * unpaidBalance
-        updatedBalance = unpaidBalance + interest
-    if unpaidBalance > 0:
-        updatedBalance = balance
-        MinFixedMonthlyPayment += 10
+def findBalance (balance, payment, annualInterestRate):
+    for i in range(1, 13):
+        unpaidBalance = balance - payment
+        interest = annualInterestRate / 12 * unpaidBalance
+        balance = unpaidBalance + interest
+    return balance
+
+while upperBound - lowerBound > 0.01:
+    middle = lowerBound + (upperBound - lowerBound) / 2
+    if findBalance(balance, lowerBound, annualInterestRate) * (findBalance(balance, middle, annualInterestRate)) < 0 :
+        upperBound = middle
+    elif findBalance(balance, upperBound, annualInterestRate) * (findBalance(balance, middle, annualInterestRate)) < 0 :
+        lowerBound = middle
     else:
         break
 
-print('Lowest payment: %d' % MinFixedMonthlyPayment)
+print('middle: %.2f' % (middle))
