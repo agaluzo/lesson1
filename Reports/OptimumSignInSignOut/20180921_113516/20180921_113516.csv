@@ -1,0 +1,58 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+OptimumSignInSignOut,,,2018-09-21 11:35:18,2018-09-21 11:38:32,3m - 14.206s,PASSED
+,,,,,,
+Test Cases/Optimum Login,,,2018-09-21 11:35:18,2018-09-21 11:36:26,1m - 7.720s,PASSED
+startApplication,,Start application,2018-09-21 11:35:19,2018-09-21 11:35:38,18.846s,PASSED
+tap,,Tap Sign In button,2018-09-21 11:35:38,2018-09-21 11:35:43,4.706s,PASSED
+tap,,Select Optimum provider,2018-09-21 11:35:43,2018-09-21 11:35:47,4.056s,PASSED
+setText,,Enter login(research38),2018-09-21 11:35:47,2018-09-21 11:36:00,13.484s,PASSED
+setText,,Enter password(support38),2018-09-21 11:36:00,2018-09-21 11:36:13,13.137s,PASSED
+hideKeyboard,,,2018-09-21 11:36:13,2018-09-21 11:36:14,0.968s,PASSED
+tap,,Tap Sign In button on Provider page,2018-09-21 11:36:14,2018-09-21 11:36:15,0.882s,PASSED
+verifyElementVisible,,Verify Provider's logo is displayed,2018-09-21 11:36:15,2018-09-21 11:36:24,8.861s,PASSED
+,,,,,,
+Test Cases/OptimumExtras,,,2018-09-21 11:36:26,2018-09-21 11:37:00,33.416s,PASSED
+comment,,,2018-09-21 11:36:27,2018-09-21 11:36:27,0.041s,PASSED
+tap,,Select Show,2018-09-21 11:36:27,2018-09-21 11:36:28,1.479s,PASSED
+Statement - extrasNotFound = true,,,2018-09-21 11:36:28,2018-09-21 11:36:28,0.004s,PASSED
+Statement - driver = com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory.getDriver(),,,2018-09-21 11:36:28,2018-09-21 11:36:28,0.018s,PASSED
+Statement - ta = new io.appium.java_client.TouchAction(driver),,,2018-09-21 11:36:28,2018-09-21 11:36:28,0.033s,PASSED
+Statement - While (extrasNotFound),,,2018-09-21 11:36:28,2018-09-21 11:36:33,4.648s,PASSED
+tap,,Tap Play button,2018-09-21 11:36:33,2018-09-21 11:36:35,2.174s,PASSED
+verifyElementNotVisible,,Verify that error message is not displayed,2018-09-21 11:36:35,2018-09-21 11:36:50,15.146s,PASSED
+pressBack,,"Press Back button to return from fullscreen mode
+",2018-09-21 11:36:50,2018-09-21 11:36:52,1.581s,PASSED
+tap,,Tap Back button to return on Home screen,2018-09-21 11:36:52,2018-09-21 11:36:57,5.803s,PASSED
+,,,,,,
+Test Cases/OptimumEpisode,,,2018-09-21 11:37:00,2018-09-21 11:37:30,30.135s,PASSED
+Statement - driver = com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory.getDriver(),,,2018-09-21 11:37:00,2018-09-21 11:37:00,0.009s,PASSED
+Statement - ta = new io.appium.java_client.TouchAction(driver),,,2018-09-21 11:37:00,2018-09-21 11:37:00,0.011s,PASSED
+"Statement - While (com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.verifyElementNotExist(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(HomeScreen/ShowLabel), 2, OPTIONAL))",,Find Show with episode,2018-09-21 11:37:00,2018-09-21 11:37:02,2.073s,PASSED
+tap,,,2018-09-21 11:37:02,2018-09-21 11:37:03,1.192s,PASSED
+"Statement - While (com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.verifyElementNotExist(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(ShowDetailsScreen/PlayButton), 2, OPTIONAL))",,Find full episode on Show Details screen,2018-09-21 11:37:03,2018-09-21 11:37:08,4.696s,PASSED
+tap,,Tap Play button,2018-09-21 11:37:08,2018-09-21 11:37:09,1.160s,PASSED
+verifyElementText,,"Verify label ""Full Episode""",2018-09-21 11:37:09,2018-09-21 11:37:13,3.695s,PASSED
+verifyElementNotVisible,,Verify that error message is not displayed ,2018-09-21 11:37:13,2018-09-21 11:37:23,10.036s,PASSED
+tap,,Tap Back button to return on Show Details screen,2018-09-21 11:37:23,2018-09-21 11:37:24,1.116s,PASSED
+tap,,Tap Back button to return on Home screen,2018-09-21 11:37:24,2018-09-21 11:37:28,3.734s,PASSED
+,,,,,,
+Test Cases/OptimumMovies,,,2018-09-21 11:37:30,2018-09-21 11:38:11,41.541s,PASSED
+tap,,Tap Hamburger menu,2018-09-21 11:37:30,2018-09-21 11:37:30,0.520s,PASSED
+tap,,Tap Movies,2018-09-21 11:37:30,2018-09-21 11:37:32,1.257s,PASSED
+verifyElementVisible,,"Verify ""Movies"" label",2018-09-21 11:37:32,2018-09-21 11:37:34,2.010s,PASSED
+tap,,Select first movie,2018-09-21 11:37:34,2018-09-21 11:37:36,2.082s,PASSED
+tap,,Tap Play button,2018-09-21 11:37:36,2018-09-21 11:37:38,1.972s,PASSED
+"Statement - While (com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.verifyElementExist(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(Player/Spinner), 2, OPTIONAL))",,,2018-09-21 11:37:38,2018-09-21 11:37:56,17.910s,PASSED
+verifyElementNotVisible,,Verify that error message is displayed,2018-09-21 11:37:56,2018-09-21 11:38:06,10.016s,PASSED
+tap,,Tap Back button to return on Home screen,2018-09-21 11:38:06,2018-09-21 11:38:09,3.353s,PASSED
+,,,,,,
+Test Cases/Optimum Logout,,,2018-09-21 11:38:11,2018-09-21 11:38:32,20.934s,PASSED
+tap,,Tap Hamburger button,2018-09-21 11:38:11,2018-09-21 11:38:12,0.396s,PASSED
+tap,,Navigate to Account screen,2018-09-21 11:38:12,2018-09-21 11:38:13,1.513s,PASSED
+verifyElementVisible,,"Verify label ""You are currently signed in with your TV Provider""",2018-09-21 11:38:13,2018-09-21 11:38:16,2.728s,PASSED
+tap,,Tap Sign Out,2018-09-21 11:38:16,2018-09-21 11:38:17,1.335s,PASSED
+verifyElementVisible,,"Verify label """"Please sign in with your TV provider
+",2018-09-21 11:38:17,2018-09-21 11:38:23,5.526s,PASSED
+tap,,Navigate to Home screen and verify Sign In button,2018-09-21 11:38:23,2018-09-21 11:38:24,0.944s,PASSED
+verifyElementVisible,,Verify Sign In button is displayed,2018-09-21 11:38:24,2018-09-21 11:38:27,3.058s,PASSED
+closeApplication,,,2018-09-21 11:38:27,2018-09-21 11:38:30,3.052s,PASSED
